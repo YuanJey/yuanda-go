@@ -49,6 +49,7 @@ func main() {
 	log.Println("购买2000元的数量:", num2000)
 	// 启动浏览器（headless 模式可通过参数控制）
 	l := launcher.New().Headless(false).MustLaunch()
+	//l := launcher.New().Bin("./chromium/chrome.exe").Headless(false).MustLaunch()
 	rod.New()
 	browser := rod.New().ControlURL(l).MustConnect()
 
